@@ -1,0 +1,11 @@
+# Netlify build settings for NF CryptoMarket (Vite + React + a serverless function)
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Single-page app: serve index.html for any non-file, non-function route.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
